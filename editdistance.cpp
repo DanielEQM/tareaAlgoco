@@ -12,7 +12,7 @@ int edit_distance(string s1, string s2){
                     ins = matrix[i][j-1] + costo_ins(s2[j-1]);
 
                 matrix[i][j] = min(del, min(sub, ins));
-                if(i > 1 && j > 1 && s1[i-1] == s2[j-1] && s1[i-2] == s2[j-1]){
+                if(i > 1 && j > 1 && s1[i-1] == s2[j-2] && s1[i-2] == s2[j-1]){
                     matrix[i][j] = min(matrix[i][j], matrix[i-2][j-2] + costo_trans(s1[i-1], s1[i-2]));
                 }
             }

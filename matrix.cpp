@@ -41,7 +41,7 @@ void base_case(){
     for(int i = 0; i < 26; i++){
         for(int j = 0; j < 26; j++){
             if(i == j) salida << 0 << " ";
-            else salida << 1 << " ";
+            else salida << 2 << " ";
         }
         salida << "\n";
     }
