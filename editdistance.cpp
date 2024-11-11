@@ -17,7 +17,7 @@ int edit_distance(string s1, string s2){
                 }
             }
         }
-        
+        /*
         cout << "    ";
         for(char s: s2) cout << s << " ";
         cout << "\n";
@@ -27,7 +27,7 @@ int edit_distance(string s1, string s2){
                 cout << matrix[i][j] << " ";
             }
             cout << "\n";
-        }
+        }*/
         return matrix[matrix.size()-1][matrix[0].size()-1];
     }
 }
