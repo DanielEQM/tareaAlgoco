@@ -13,10 +13,7 @@ void fuerzaBruta(string s1, string s2, int valor){
             valor += costo_del(s1[i]);
         }
         costo = min(costo, valor);
-    } else if(s1 == s2){
-        costo = min(costo, valor);
     } else {
-        
         fuerzaBruta(s1.substr(1), s2.substr(1), valor + costo_sub(s1[0], s2[0]));
         fuerzaBruta(s1, s2.substr(1), valor + costo_ins(s2[0]));
         fuerzaBruta(s1.substr(1), s2, valor + costo_del(s1[0]));

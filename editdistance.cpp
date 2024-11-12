@@ -17,17 +17,17 @@ int edit_distance(string s1, string s2){
                 }
             }
         }
-        /*
-        cout << "    ";
-        for(char s: s2) cout << s << " ";
-        cout << "\n";
-        for(int i = 0; i < matrix.size(); i++){
-            if(i) cout << s1[i-1] << " "; else cout << "  ";
-            for(int j = 0; j < matrix[0].size(); j++){
-                cout << matrix[i][j] << " ";
-            }
-            cout << "\n";
-        }*/
+        
+        //cout << "    ";
+        //for(char s: s2) cout << s << " ";
+        //cout << "\n";
+        //for(int i = 0; i < matrix.size(); i++){
+        //    if(i) cout << s1[i-1] << " "; else cout << "  ";
+        //    for(int j = 0; j < matrix[0].size(); j++){
+        //        cout << matrix[i][j] << " ";
+        //    }
+        //    cout << "\n";
+        //}
         return matrix[matrix.size()-1][matrix[0].size()-1];
     }
 }
