@@ -21,7 +21,7 @@ void fuerzaBruta(string s1, string s2, int valor){
         if(s1.size() > 1 && s2.size() > 1){
             if(s1[1] == s2[0] && s1[0] == s2[1]){
                 swap(s1[0], s1[1]);
-                fuerzaBruta(s1.substr(1), s2.substr(1), valor + costo_trans(s1[1], s1[0]));
+                fuerzaBruta(s1.substr(2), s2.substr(2), valor + costo_trans(s1[1], s1[0]));
                 swap(s1[0], s1[1]);
             }
         }
