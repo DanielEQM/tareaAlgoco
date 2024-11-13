@@ -9,6 +9,7 @@ vector <int> cost_insert(26);
 vector<vector <int> > cost_transpose(26, vector<int>(26));
 
 void Replace(){
+    //obtiene los datos de la matriz sustituir.
     ifstream entrada;
     entrada.open("data/cost_replace.txt");
     for(int i = 0; i < 26; i++){
@@ -20,6 +21,7 @@ void Replace(){
 }
 
 void Delete(){
+    //obtiene los datos de la lista de eliminación.
     ifstream entrada;
     entrada.open("data/cost_delete.txt");
     for(int i = 0; i < 26; i++){
@@ -29,6 +31,7 @@ void Delete(){
 }
 
 void Insert(){
+    //obtiene los datos de la lista de insertar.
     ifstream entrada;
     entrada.open("data/cost_insert.txt");
     for(int i = 0; i < 26; i++){
@@ -38,6 +41,7 @@ void Insert(){
 }
 
 void Transpose(){
+    //obtiene los datos de la matriz de transponer.
     ifstream entrada;
     entrada.open("data/cost_transpose.txt");
     for(int i = 0; i < 26; i++){
