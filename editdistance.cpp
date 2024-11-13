@@ -1,6 +1,16 @@
 #include "costos.hpp"
 
 int edit_distance(string s1, string s2){
+    /*
+    * Nombre: edit_distance
+    * Parametros:
+    *   * string s1: string a modificar.
+    *   * string s2: string objetivo.
+    * Descripción:
+    *   Una vez identificados los subproblemas, se crea una tabla
+    *   donde se rellena con los valores minimos de ir comparando
+    *   casilla por casilla, dando el optimo en la ultima de estas.
+    */
     if(s1 == s2) return 0;
     else {
         vector <vector <int> > matrix(s1.size() + 1, vector<int>(s2.size() + 1, 0));
@@ -34,15 +44,11 @@ int edit_distance(string s1, string s2){
 
 int main(){
     Replace(); Insert(); Delete(); Transpose();
-    //printMatrix(cost_replace);
-    //cout << "\n";
-    //for(int i = 0; i < cost_delete.size(); i++) cout << cost_delete[i] << " ";
-    //cout << "\n\n";
-    //for(int i = 0; i < cost_insert.size(); i++) cout << cost_insert[i] << " ";
-    //cout << "\n\n";
     string s1, s2;
+    cout << "Palabra a modificar: ";
     getline(cin, s1);
+    cout << "Palabra objetivo: ";
     getline(cin, s2);
-    cout << edit_distance(s1, s2) << "\n";
+    cout << "\nDistancia de Edición minima: " << edit_distance(s1, s2) << "\n";
     return 0;
 }

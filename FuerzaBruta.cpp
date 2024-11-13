@@ -3,6 +3,16 @@
 int costo = INT_MAX;
 
 void fuerzaBruta(string s1, string s2, int valor){
+    /*
+    * Nombre: fuerzaBruta.
+    * Parametros:
+    *   * string s1: string a modificar.
+    *   * string s2: string objetivo.
+    *   * int valor: costo acumulado.
+    * Descripción:
+    *   Recorre recursivamente las palabras operación por operación hasta
+    *   encontrar algún string vacio para ver el minimo.
+    */
     if(s1.size() == 0){
         for(int i = 0; i < s2.size(); i++){
             valor += costo_ins(s2[i]);
@@ -32,9 +42,11 @@ void fuerzaBruta(string s1, string s2, int valor){
 int main(){
     Insert(); Delete(); Transpose(); Replace();
     string s1, s2;
+    cout << "Palabra a modificar: ";
     getline(cin, s1);
+    cout << "Palabra objetivo: ";
     getline(cin, s2);
     fuerzaBruta(s1, s2, 0);
-    cout << costo << "\n";
+    cout << "\nDistancia de Edición minima: " << costo << "\n";
     return 0;
 }
