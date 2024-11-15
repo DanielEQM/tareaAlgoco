@@ -1,14 +1,14 @@
-all2:
-		g++ FuerzaBruta.cpp funtion.hpp costos.hpp -o si
-		./si 
+FB:
+		g++ FuerzaBruta.cpp funtion.hpp costos.hpp -o fbr
+		./fbr
 
-all:
-		g++ editdistance.cpp funtion.hpp costos.hpp -o si
-		./si 
+DP:
+		g++ editdistance.cpp funtion.hpp costos.hpp -o dpm
+		./dpm
 
 run:
 		g++ matrix.cpp -o si
 		./si
 
 clear:
-		rm -f si
+		rm -f fbr dpm si

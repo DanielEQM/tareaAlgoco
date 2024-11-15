@@ -1,66 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void base_case2(){
-    ofstream salida;
-    salida.open("data/cost_replace.txt");
-    srand(time(0));
-    for(int i = 0; i < 26; i++){
-        for(int j = 0; j < 26; j++){
-            if(i == j) salida << 0 << " ";
-            else salida << rand() % 9 + 1<< " ";
-        }
-        salida << "\n";
-    }
-    salida.close();
-    salida.open("data/cost_delete.txt");
-    for(int i = 0; i < 26; i++){
-        salida << rand() % 9 + 1 << " ";
-    }
-    salida.close();
-    salida.open("data/cost_insert.txt");
-    for(int i = 0; i < 26; i++){
-        salida << rand() % 9 + 1 << " ";
-    }
-    salida.close();
-    salida.open("data/cost_transpose.txt");
-    for(int i = 0; i < 26; i++){
-        for(int j = 0; j < 26; j++){
-            if(i == j) salida << 0 << " ";
-            else salida << rand() % 9 + 1 << " ";
-        }
-        salida << "\n";
-    }
-    salida.close();
-}
-
 void base_case(){
     ofstream salida;
-    salida.open("data/cost_replace.txt");
-    srand(time(0));
+    int costo;
+    salida.open("dataCost/cost_replace.txt");
+    cout << "costo sustituir: "; cin >> costo;
     for(int i = 0; i < 26; i++){
         for(int j = 0; j < 26; j++){
             if(i == j) salida << 0 << " ";
-            else salida << 1 << " ";
+            else salida << costo << " ";
         }
         salida << "\n";
     }
     salida.close();
-    salida.open("data/cost_delete.txt");
+    cout << "costo eliminar: "; cin >> costo;
+    salida.open("dataCost/cost_delete.txt");
     for(int i = 0; i < 26; i++){
-        salida << 1 << " ";
+        salida << costo << " ";
     }
     salida.close();
-    salida.open("data/cost_insert.txt");
+    cout << "costo insertar: "; cin >> costo;
+    salida.open("dataCost/cost_insert.txt");
     for(int i = 0; i < 26; i++){
-        salida << 1 << " ";
+        salida << costo << " ";
     }
     salida.close();
-    salida.open("data/cost_transpose.txt");
+    cout << "costo transponer: "; cin >> costo;
+    salida.open("dataCost/cost_transpose.txt");
     for(int i = 0; i < 26; i++){
         for(int j = 0; j < 26; j++){
             if(i == j) salida << 0 << " ";
-            else salida << 1 << " ";
+            else salida << costo << " ";
         }
         salida << "\n";
     }
@@ -69,6 +40,5 @@ void base_case(){
 
 int main(){
     base_case();
-    //base_case2();
     return 0;
 }
