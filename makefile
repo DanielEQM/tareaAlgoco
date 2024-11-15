@@ -1,10 +1,10 @@
 all2:
 		g++ FuerzaBruta.cpp funtion.hpp costos.hpp -o si
-		./si < input.txt
+		./si 
 
 all:
 		g++ editdistance.cpp funtion.hpp costos.hpp -o si
-		./si < input.txt
+		./si 
 
 run:
 		g++ matrix.cpp -o si

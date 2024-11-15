@@ -41,12 +41,22 @@ void fuerzaBruta(string s1, string s2, int valor){
 
 int main(){
     Insert(); Delete(); Transpose(); Replace();
-    string s1, s2;
-    cout << "Palabra a modificar: ";
-    getline(cin, s1);
-    cout << "Palabra objetivo: ";
-    getline(cin, s2);
-    fuerzaBruta(s1, s2, 0);
-    cout << "\nDistancia de Edición minima: " << costo << "\n";
+    string s[2];
+    ifstream input;
+    string caso;
+    cout << "Numero del archivo input (1 al 10): "; cin >> caso;
+    input.open("datasets/input"+caso+".txt");
+    int cont = 0;
+    while (getline(input, caso)){
+        s[cont++] = caso;
+    }
+    input.close();
+    cout << s[0] << " - " << s[1] +"\n";
+    auto start = chrono::high_resolution_clock::now();
+    fuerzaBruta(s[0], s[1], 0);
+    auto end = chrono::high_resolution_clock::now();
+    chrono::duration<double> duration = end - start;
+	cout << "Tiempo en segundos de Distancia de Edición minima entre "+s[0]+" a "+s[1]+": " << fixed << setprecision(5) << duration.count() << "\n";
+    cout << "Distancia minima es: " << costo << "\n";
     return 0;
 }
