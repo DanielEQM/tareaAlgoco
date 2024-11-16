@@ -2,6 +2,9 @@
 using namespace std;
 
 void base_case(){
+    /*
+    Crea casos de distintos costos.
+    */
     ofstream salida;
     int costo;
     salida.open("dataCost/cost_replace.txt");
